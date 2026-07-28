@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050b08"/>
+      <stop offset="55%" stop-color="#081f14"/>
+      <stop offset="100%" stop-color="#0c2a1a"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1fbf6a"/>
+      <stop offset="50%" stop-color="#0f8a4c"/>
+      <stop offset="100%" stop-color="#054a28"/>
+    </linearGradient>
+    <linearGradient id="shieldEdge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7cffb0"/>
+      <stop offset="100%" stop-color="#0f8a4c" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c56e" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#22c56e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="textGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eafff2"/>
+      <stop offset="100%" stop-color="#9df7c3"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="360" fill="url(#bgGrad)"/>
+
+  <!-- soft ambient glow behind shield -->
+  <ellipse cx="960" cy="180" rx="260" ry="220" fill="url(#glow)"/>
+
+  <!-- grid dots suggesting scanning / network -->
+  <g fill="#1a4a30" opacity="0.55">
+    <circle cx="90" cy="40" r="2"/>
+    <circle cx="140" cy="60" r="2"/>
+    <circle cx="190" cy="40" r="2"/>
+    <circle cx="240" cy="70" r="2"/>
+    <circle cx="90" cy="90" r="2"/>
+    <circle cx="140" cy="110" r="2"/>
+    <circle cx="190" cy="90" r="2"/>
+    <circle cx="240" cy="120" r="2"/>
+    <circle cx="90" cy="300" r="2"/>
+    <circle cx="140" cy="320" r="2"/>
+    <circle cx="190" cy="300" r="2"/>
+    <circle cx="60" cy="270" r="2"/>
+  </g>
+
+  <!-- faint circuit lines across background -->
+  <g stroke="#0f5b34" stroke-width="1.5" fill="none" opacity="0.5">
+    <path d="M0 250 H180 L210 220 H420"/>
+    <path d="M0 300 H120 L150 330 H360"/>
+    <path d="M1200 60 H1000 L970 90 H820"/>
+    <path d="M1200 110 H1050 L1020 140 H900"/>
+    <circle cx="420" cy="220" r="4" fill="#1fbf6a"/>
+    <circle cx="820" cy="90" r="4" fill="#1fbf6a"/>
+    <circle cx="900" cy="140" r="4" fill="#1fbf6a"/>
+  </g>
+
+  <!-- shield emblem -->
+  <g transform="translate(940,180)">
+    <path d="M0 -120 L100 -80 L100 20 C100 90 40 140 0 150 C-40 140 -100 90 -100 20 L-100 -80 Z"
+          fill="url(#shieldGrad)" stroke="#7cffb0" stroke-width="2" opacity="0.95"/>
+    <path d="M0 -120 L100 -80 L100 20 C100 90 40 140 0 150 C-40 140 -100 90 -100 20 L-100 -80 Z"
+          fill="none" stroke="url(#shieldEdge)" stroke-width="4"/>
+    <!-- checkmark -->
+    <path d="M-45 5 L-10 40 L55 -45" fill="none" stroke="#eafff2" stroke-width="12"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- small lock notch top -->
+    <circle cx="0" cy="-95" r="5" fill="#eafff2" opacity="0.8"/>
+  </g>
+
+  <!-- download arrow motif near shield base -->
+  <g transform="translate(940,300)" opacity="0.85">
+    <line x1="0" y1="-25" x2="0" y2="20" stroke="#7cffb0" stroke-width="6" stroke-linecap="round"/>
+    <polyline points="-16,4 0,20 16,4" fill="none" stroke="#7cffb0" stroke-width="6"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="-30" y1="30" x2="30" y2="30" stroke="#7cffb0" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- headline -->
+  <text x="60" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="60" font-weight="700"
+        fill="url(#textGlow)" textLength="1000" lengthAdjust="spacingAndGlyphs">
+    Kaspersky Full Version
+  </text>
+  <text x="60" y="215" font-family="'Segoe UI', Arial, sans-serif" font-size="60" font-weight="700"
+        fill="url(#textGlow)" textLength="360" lengthAdjust="spacingAndGlyphs">
+    Download
+  </text>
+
+  <!-- tagline -->
+  <text x="60" y="260" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#bfe9cf"
+        textLength="900" lengthAdjust="spacingAndGlyphs">
+    Fetches the full Kaspersky installer for Windows, no license key required
+  </text>
+
+  <!-- underline accent -->
+  <rect x="60" y="280" width="140" height="4" rx="2" fill="#1fbf6a"/>
+</svg>
